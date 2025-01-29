@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://mods-unpacked/makizakao-Expresstato/resource/translations/expresstato.ja.translation", "res://mods-unpacked/makizakao-Expresstato/resource/translations/expresstato.en.translation" ]
+
+source_file="res://mods-unpacked/makizakao-Expresstato/resource/translations/expresstato.csv"
+dest_files=[ "res://mods-unpacked/makizakao-Expresstato/resource/translations/expresstato.ja.translation", "res://mods-unpacked/makizakao-Expresstato/resource/translations/expresstato.en.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

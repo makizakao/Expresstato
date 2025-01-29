@@ -23,8 +23,8 @@ func _init(modLoader = ModLoader):
 	]
 	
 	var translations = [
-		#"bro_express.en.translation",
-		#"bro_express.ja.translation",
+		"expresstato.en.translation",
+		"expresstato.ja.translation",
 	]
 	
 	for extension in extensions:
