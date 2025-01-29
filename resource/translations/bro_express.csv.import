@@ -5,10 +5,10 @@ type="Translation"
 
 [deps]
 
-files=[ "res://mods-unpacked/makizakao-BroExpress/resource/translations/bro_express.ja.translation", "res://mods-unpacked/makizakao-BroExpress/resource/translations/bro_express.en.translation" ]
+files=[ "res://mods-unpacked/makizakao-Expresstato/resource/translations/bro_express.ja.translation", "res://mods-unpacked/makizakao-Expresstato/resource/translations/bro_express.en.translation" ]
 
-source_file="res://mods-unpacked/makizakao-BroExpress/resource/translations/bro_express.csv"
-dest_files=[ "res://mods-unpacked/makizakao-BroExpress/resource/translations/bro_express.ja.translation", "res://mods-unpacked/makizakao-BroExpress/resource/translations/bro_express.en.translation" ]
+source_file="res://mods-unpacked/makizakao-Expresstato/resource/translations/bro_express.csv"
+dest_files=[ "res://mods-unpacked/makizakao-Expresstato/resource/translations/bro_express.ja.translation", "res://mods-unpacked/makizakao-Expresstato/resource/translations/bro_express.en.translation" ]
 
 [params]
 
