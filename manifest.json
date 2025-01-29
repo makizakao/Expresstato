@@ -1,0 +1,19 @@
+{
+    "name": "BroExpress",
+    "namespace": "makizakao",
+    "version_number": "0.1.0",
+    "description": "This mod is a fan mod of Honkai Star Rail. It adds a new character to the game.",
+    "website_url": "",
+    "dependencies": [
+        "Darkly77-ContentLoader"
+    ],
+    "extra": {
+        "godot": {
+            "incompatibilities": [],
+            "authors": ["makizakao"],
+            "compatible_mod_loader_version": ["6.0.0"],
+            "compatible_game_version": ["1.1.8.1"],
+            "config_defaults": {}
+        }
+    }
+}
