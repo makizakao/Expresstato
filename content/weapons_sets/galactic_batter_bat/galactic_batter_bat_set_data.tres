@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons_sets/galactic_batter_bat/galactic_batter_bat_set_5_effect_1.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons_sets/galactic_batter_bat/galactic_batter_bat_set_6_effect_1.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons_sets/galactic_batter_bat/galactic_batter_bat_set_2_effect_1.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons_sets/galactic_batter_bat/galactic_batter_bat_set_3_effect_1.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons_sets/galactic_batter_bat/galactic_batter_bat_set_4_effect_1.tres" type="Resource" id=5]
+[ext_resource path="res://items/sets/set_data.gd" type="Script" id=13]
+
+[resource]
+script = ExtResource( 13 )
+my_id = "set_galactic_batter_bat"
+name = "WEAPON_CLASS_GALACTIC_BATTER_BAT"
+set_bonuses = [ [ ExtResource( 3 ) ], [ ExtResource( 4 ) ], [ ExtResource( 5 ) ], [ ExtResource( 1 ) ], [ ExtResource( 2 ) ] ]

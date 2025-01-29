@@ -1,8 +1,8 @@
 {
-    "name": "BroExpress",
+    "name": "Expresstato",
     "namespace": "makizakao",
     "version_number": "0.1.0",
-    "description": "This mod is a fan mod of Honkai Star Rail. It adds a new character to the game.",
+    "description": "This mod is a fan mod of Honkai Star Rail. It adds new characters to Brotato.",
     "website_url": "",
     "dependencies": [
         "Darkly77-ContentLoader"
