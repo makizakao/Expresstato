@@ -1,4 +1,4 @@
 keys,ja,en
 WEAPON_GALACTIC_BATTER_BAT,銀河打者のバット,Galactic Batter's Bat
 WEAPON_CLASS_GALACTIC_BATTER_BAT,銀河打者のバット,Galactic Batter's Bat
-EFFECT_GAIN_DAMAGE_PCT_HP,体力が{2}%未満になるとダメージが+{0}%,Damage +{0}% when HP is below {2}%
+EFFECT_PATH_DESTRUCTION,壊滅の運命\nウェーブ終了時にSPを獲得\n体力が{2}%未満になるとダメージ+{0}%,Path of Destruction\nGain SP at the end of each wave\nDamage +{0}% when below {2}% HP
