@@ -5,12 +5,13 @@ var added_damage: int = 0
 
 func _process(delta):
 	for effect in effects:
-		ModLoaderLog.debug(effect.key, "makizakao")
 		if effect.key == "gain_damage_pct_hp":
 			_handle_gain_damage_pct_hp(effect.get_args(player_index))
-	ModLoaderLog.debug("finish", "makizakao")
 
 func _handle_gain_damage_pct_hp(effect):
+	if RunData.wave_in_progress == false:
+		has_low_hp = false
+		return
 	var cur_hp = RunData.get_player_current_health(player_index)
 	var max_hp = RunData.get_player_max_health(player_index)
 	var damage = max(RunData.get_stat("stat_percent_damage", player_index), 0)

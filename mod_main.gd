@@ -12,16 +12,16 @@ func _init(modLoader = ModLoader):
 	extension_path = path + extension_path
 	translation_path = path + translation_path
 	
-	
+	# スクリプトのdir
 	var extensions = [
+		"singletons/player_run_data.gd",
 		"singletons/run_data.gd",
-		"weapons/weapon.gd"
-		#"singletons/run_data.gd",
-		#"singletons/text.gd",
-		#"entities/units/player/player.gd",
-		#"main.gd"
+		#"weapons/weapon.gd",
+		"ui/hud/skill_point_ui.gd",
+		"main.gd"
 	]
 	
+	# 翻訳ファイルのdir
 	var translations = [
 		"expresstato.en.translation",
 		"expresstato.ja.translation",
@@ -39,7 +39,7 @@ func _ready():
 	ModLoaderLog.info("Ready", MOD_LOG)
 	return
 
-
+# ContentLoaderによるアイテムやキャラクターの追加
 func _load_content():
 	ModLoaderLog.info("Loading mod content", MOD_LOG)
 	var ContentLoader = get_node("/root/ModLoader/Darkly77-ContentLoader/ContentLoader")
