@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sp.png-aa2a0e679ff9b181fc01ecf775e0cdc8.stex"
+path="res://.import/expresstato_sp.png-8bf441f438f455dcb72137bd766bdd8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/makizakao-Expresstato/resource/images/ui/hud/sp.png"
-dest_files=[ "res://.import/sp.png-aa2a0e679ff9b181fc01ecf775e0cdc8.stex" ]
+source_file="res://mods-unpacked/makizakao-Expresstato/resource/images/ui/hud/expresstato_sp.png"
+dest_files=[ "res://.import/expresstato_sp.png-8bf441f438f455dcb72137bd766bdd8f.stex" ]
 
 [params]
 

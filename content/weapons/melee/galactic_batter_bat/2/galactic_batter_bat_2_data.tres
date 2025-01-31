@@ -4,7 +4,7 @@
 [ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons/melee/galactic_batter_bat/3/galactic_batter_bat_3_data.tres" type="Resource" id=2]
 [ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons_sets/galactic_batter_bat/galactic_batter_bat_set_data.tres" type="Resource" id=3]
 [ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons/melee/galactic_batter_bat/2/galactic_batter_bat_2_stats.tres" type="Resource" id=5]
-[ext_resource path="res://mods-unpacked/makizakao-Expresstato/resource/images/weapons/melee/galactic_batter_bat/galactic_batter_bat_icon.png" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/resource/images/weapons/melee/galactic_batter_bat/expresstato_galactic_batter_bat_icon.png" type="Texture" id=6]
 [ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons/melee/galactic_batter_bat/galactic_batter_bat.tscn" type="PackedScene" id=7]
 
 [resource]

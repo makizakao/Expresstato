@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sp_empty.png-bc7082a27700c9822d4e678562ecaff6.stex"
+path="res://.import/expresstato_galactic_batter_bat.png-2f51fcc7c25dc284ad0cfc474f018435.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/makizakao-Expresstato/resource/images/ui/hud/sp_empty.png"
-dest_files=[ "res://.import/sp_empty.png-bc7082a27700c9822d4e678562ecaff6.stex" ]
+source_file="res://mods-unpacked/makizakao-Expresstato/resource/images/weapons/melee/galactic_batter_bat/expresstato_galactic_batter_bat.png"
+dest_files=[ "res://.import/expresstato_galactic_batter_bat.png-2f51fcc7c25dc284ad0cfc474f018435.stex" ]
 
 [params]
 

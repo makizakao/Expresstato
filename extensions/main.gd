@@ -1,12 +1,16 @@
 extends "res://main.gd"
 
 onready var _ui_sp
+var enabled = true
 var wave_ended: bool = false
 var _sp_controller = SPController.new()
 var _path_controller = PathController.new()
 
-
 func _ready():
+	var config = get_node("/root/ModLoader/makizakao-Expresstato/Config")
+	if not config.expresstato_enabled:
+		enabled = false
+		return
 	for player_idx in RunData.players_data.size():
 		var path = RunData.get_player_effect("path_effect", player_idx)
 		if path.empty(): return
@@ -17,5 +21,6 @@ func _ready():
 		_ui_sp.update_sp(current_sp)
 
 func _process(delta):
+	if not enabled: return
 	_sp_controller.process(delta)
 	_path_controller.process(delta)

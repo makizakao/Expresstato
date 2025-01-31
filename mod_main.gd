@@ -5,6 +5,8 @@ const MOD_LOG = "makizakao-Expressrtato"
 var path = ""
 var extension_path = "extensions/"
 var translation_path = "resource/translations/"
+var content_manager_script = load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/content_manager.gd")
+var config_script = load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/mod_configs.gd")
 
 func _init(modLoader = ModLoader):
 	ModLoaderLog.info("Init", MOD_LOG)
@@ -35,19 +37,18 @@ func _init(modLoader = ModLoader):
 	
 
 func _ready():
+	_load_configs()
 	_load_content()
 	ModLoaderLog.info("Ready", MOD_LOG)
 	return
 
 # ContentLoaderによるアイテムやキャラクターの追加
-func _load_content():
-	ModLoaderLog.info("Loading mod content", MOD_LOG)
-	var ContentLoader = get_node("/root/ModLoader/Darkly77-ContentLoader/ContentLoader")
-	var contents = [
-		"content_data/characters.tres",
-		"content_data/items.tres",
-		"content_data/weapons_melee/galactic_batter_bat.tres"
-	]
-	
-	for content in contents:
-		ContentLoader.load_data(path + content, MOD_LOG)
+func _load_content() -> void:
+	var content_manager = content_manager_script.new()
+	content_manager.set_name("ContentManager")
+	$"/root/ModLoader/makizakao-Expresstato".call("add_child", content_manager)
+
+func _load_configs() -> void:
+	var config = config_script.new()
+	config.set_name("Config")
+	$"/root/ModLoader/makizakao-Expresstato".call("add_child", config)

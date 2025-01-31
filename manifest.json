@@ -12,8 +12,7 @@
             "incompatibilities": [],
             "authors": ["makizakao"],
             "compatible_mod_loader_version": ["6.0.0"],
-            "compatible_game_version": ["1.1.8.1"],
-            "config_defaults": {}
+            "compatible_game_version": ["1.1.8.1"]
         }
     }
 }
