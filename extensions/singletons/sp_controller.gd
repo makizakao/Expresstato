@@ -11,8 +11,8 @@ func process(delta) -> void:
 		_wave_ended = true
 		# プレイヤーごとに追加
 		for player_idx in RunData.players_data.size():
-			var path = RunData.get_player_effect("path_effect", player_idx)
-			if path.empty(): return
+			var is_mod_character = RunData.get_player_effect_bool("expresstato_character_effect", player_idx)
+			if not is_mod_character: return
 			var current_sp = RunData.get_stat("current_sp", player_idx)
 			if current_sp < _MAX_SP:
 				RunData.add_stat("current_sp", 1, player_idx)

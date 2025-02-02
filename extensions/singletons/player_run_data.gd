@@ -3,7 +3,10 @@ extends "res://singletons/player_run_data.gd"
 # Modで追加するEffectを登録する
 static func init_effects() -> Dictionary:
 	var mod_effects = {
-		"path_effect": []
+		"expresstato_character_effect": 0,
+		"add_from_weapon": 0,
+		"path_effect": [],
+		"trailblazer_effect": []
 	}
 	var effects = .init_effects()
 	effects.merge(mod_effects)

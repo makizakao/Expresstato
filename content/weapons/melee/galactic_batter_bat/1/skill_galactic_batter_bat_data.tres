@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons/melee/galactic_batter_bat/1/skill_galactic_batter_bat_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/content/weapons/melee/galactic_batter_bat/skill_galactic_batter_bat.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/makizakao-Expresstato/resource/images/weapons/melee/galactic_batter_bat/expresstato_galactic_batter_bat_icon.png" type="Texture" id=6]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "skill_weapon_galactic_batter_bat_1"
+unlocked_by_default = true
+icon = ExtResource( 6 )
+name = "WEAPON_GALACTIC_BATTER_BAT"
+tier = 0
+value = 80
+effects = [  ]
+tracking_text = ""
+is_lockable = true
+is_cursed = false
+curse_factor = 0.0
+weapon_id = "weapon_skill_galactic_batter_bat"
+type = 0
+sets = [  ]
+scene = ExtResource( 3 )
+stats = ExtResource( 2 )
+add_to_chars_as_starting = [  ]

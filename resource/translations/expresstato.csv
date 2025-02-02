@@ -1,4 +1,7 @@
 keys,ja,en
 WEAPON_GALACTIC_BATTER_BAT,銀河打者のバット,Galactic Batter's Bat
 WEAPON_CLASS_GALACTIC_BATTER_BAT,銀河打者のバット,Galactic Batter's Bat
-EFFECT_PATH_DESTRUCTION,壊滅の運命\nウェーブ終了時にSPを獲得\n体力が{2}%未満になるとダメージ+{0}%,Path of Destruction\nGain SP at the end of each wave\nDamage +{0}% when below {2}% HP
+EFFECT_EXPRESSTATO_CHARACTER,ウェーブ終了時に[color=#ff5144]SP[/color]を獲得,Gain [color=#ff5144]SP[/color] at the end of each wave
+EFFECT_SKILL_GALACTIC_ BATTER_BAT,必殺技: [color=#ff5144]スターダストエース[/color]\n武器が{0}秒間強化,Ultimate: [color=#ff5144]Stardust Ace[/color]\nWeapon is enhanced for {0} seconds
+EFFECT_PATH_DESTRUCTION,[color=#b50aff]壊滅の運命[/color]\nHPが{2}[color=#00ff00]%[/color]未満になるとダメージ +{0}[color=#00ff00]%[/color],[color=#b50aff]Path of Destruction[/color]\nDamage +{0}[color=#00ff00]%[/color] when below {2}[color=#00ff00]%[/color] HP
+EFFECT_ADD_FROM_WEAPON,[color=#ffae40]銀河打者のバット[/color]を装備すると、[color=#b50aff]壊滅の運命[/color]を歩む,Equipping [color=#ffae40]Galactic Batter's Bat[/color] will allow you to walk the [color=#b50aff]Path of Destruction[/color]

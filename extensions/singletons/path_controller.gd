@@ -19,6 +19,7 @@ var _pathes: Dictionary = {
 	"path_erudition": null
 }
 
+
 # main.gdの_process()で呼び出す(フレーム毎処理)
 func process(delta):
 	# プレイヤーごとに運命の効果を適用
