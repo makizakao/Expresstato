@@ -1,0 +1,1 @@
+enum { THRUST, TWO_STAGE }

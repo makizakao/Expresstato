@@ -1,12 +1,14 @@
 extends Node
 
 const MOD_LOG = "makizakao-Expresstato"
-var _dir = "res://mods-unpacked/makizakao-Expresstato/"
+var _dir = "res://mods-unpacked/makizakao-Expresstato/content_data/"
 
 var contents = [
-	"content_data/items.tres",
-	"content_data/characters.tres",
-	"content_data/weapons_melee/galactic_batter_bat.tres",
+	"items.tres",
+	"characters.tres",
+	"sets.tres",
+	"weapons_melee/galactic_batter_bat.tres",
+	"weapons_melee/supreme_guardian_lance.tres"
 ]
 
 # 武器による運命効果のリソース 開拓者用

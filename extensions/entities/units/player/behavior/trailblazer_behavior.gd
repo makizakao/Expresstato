@@ -1,4 +1,3 @@
-class_name TrailblazerBehavior
 extends Reference
 
 var _trailblazer_weapons: Dictionary = {

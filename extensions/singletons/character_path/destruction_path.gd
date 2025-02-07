@@ -1,5 +1,4 @@
-class_name DestructionPath
-extends BasePath
+extends "res://mods-unpacked/makizakao-Expresstato/extensions/singletons/character_path/base_path.gd"
 
 var _has_low_hp: bool = false
 var _added_damage: Array = []

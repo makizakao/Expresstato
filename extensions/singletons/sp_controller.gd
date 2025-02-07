@@ -1,11 +1,10 @@
-class_name SPController
-extends Reference
+# プレイヤー全員のSPを管理する
+extends Node
 
 const _MAX_SP: int = 5
 var _wave_ended: bool = false
 
-# main.gdの_processで呼び出す(フレーム毎呼び出し)
-func process(delta) -> void:
+func _process(delta) -> void:
 	# ウェーブが終了したらSPを追加
 	if RunData.wave_in_progress == false and _wave_ended == false:
 		_wave_ended = true

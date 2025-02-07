@@ -1,31 +1,49 @@
 extends "res://main.gd"
 
+var _sp_controller_script = load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/sp_controller.gd")
+var _path_controller_script = load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/path_controller.gd")
 onready var _ui_sp
+onready var _ui_shield
 var enabled = true
 var wave_ended: bool = false
-var _sp_controller = SPController.new()
-var _path_controller = PathController.new()
 
 func _ready():
 	var config = get_node("/root/ModLoader/makizakao-Expresstato/Config")
 	if not config.expresstato_enabled:
 		enabled = false
 		return
+	_init_sp_controller()
+	_init_path_controller()
 	for player_idx in RunData.players_data.size():
-		_init_ui_sp(player_idx)
-		_handle_player_path(player_idx)
-		_handle_character_effect_from_weapon(player_idx)
+		_init_ui(player_idx)
+		_init_player_path(player_idx)
+		_init_character_effect_from_weapon(player_idx)
 
-# SPを表示するUIの初期化
-func _init_ui_sp(player_idx: int):
+# UIの初期化
+func _init_ui(player_idx: int):
 	var mod_character = RunData.get_player_effect_bool("expresstato_character_effect", player_idx)
 	if not mod_character: return
-	var scene = preload("res://mods-unpacked/makizakao-Expresstato/extensions/ui/hud/skill_point_ui.tscn")
-	_ui_sp = scene.instance()
+	var ui_scene = preload("res://mods-unpacked/makizakao-Expresstato/extensions/ui/hud/skill_point_ui.tscn")
+	var shield_scene = preload("res://mods-unpacked/makizakao-Expresstato/extensions/ui/hud/shield_ui.tscn")
+	_ui_sp = ui_scene.instance()
+	_ui_shield = shield_scene.instance()
 	$UI.add_child_below_node($UI/HUD, _ui_sp)
+	$"UI/HUD/LifeContainerP1/UILifeBarP1".add_child(_ui_shield)
+
+
+func _init_sp_controller():
+	var sp_controller = _sp_controller_script.new()
+	sp_controller.set_name("SPController")
+	$"/root/Main".call("add_child", sp_controller)
+
+func _init_path_controller():
+	var path_controller = _path_controller_script.new()
+	path_controller.set_name("PathController")
+	$"/root/Main".call("add_child", path_controller)
+
 
 # 運命を追加、削除するメソッド 開拓者用
-func _handle_player_path(player_idx: int):
+func _init_player_path(player_idx: int):
 	var require_path_effect = RunData.get_player_effect_bool("add_from_weapon", player_idx)
 	if not require_path_effect: return
 	var character = RunData.get_player_character(player_idx)
@@ -49,7 +67,7 @@ func _handle_player_path(player_idx: int):
 				path.unapply(player_idx)
 
 # 武器の必殺話を追加、削除するメソッド 開拓者用
-func _handle_character_effect_from_weapon(player_idx: int):
+func _init_character_effect_from_weapon(player_idx: int):
 	var require_weapon_effect = RunData.get_player_effect_bool("add_from_weapon", player_idx)
 	if not require_weapon_effect: return
 	var character = RunData.get_player_character(player_idx)
@@ -91,13 +109,15 @@ func _remove_effect(key: String, effects):
 			effects.remove(idx)
 			return
 
-func _process(delta):
+func _physics_process(delta):
 	if not enabled: return
-	_sp_controller.process(delta)
-	_path_controller.process(delta)
-	if _ui_sp == null: return
 	for player_idx in RunData.players_data.size():
-		_handle_ui_sp(player_idx)
+		_update_ui(player_idx)
 
-func _handle_ui_sp(player_idx: int):
-	_ui_sp.update_sp(RunData.get_stat("current_sp", player_idx))
+func _update_ui(player_idx: int):
+	if _ui_sp != null:
+		_ui_sp.update_sp(RunData.get_stat("current_sp", player_idx))
+	if _ui_shield != null:
+		var max_hp = RunData.get_player_max_health(player_idx)
+		var cur_shield  = TempStats.get_stat("current_shield", player_idx)
+		_ui_shield.update_value(cur_shield, max_hp)

@@ -16,6 +16,7 @@ static func init_effects() -> Dictionary:
 static func init_stats(all_null_values: bool = false) -> Dictionary:
 	var mod_stats = {
 		"current_sp": 0,
+		"current_shield": 0,
 	}
 	var stats = .init_stats(all_null_values)
 	stats.merge(mod_stats)

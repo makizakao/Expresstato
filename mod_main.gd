@@ -7,20 +7,19 @@ var extension_path = "extensions/"
 var translation_path = "resource/translations/"
 var content_manager_script = load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/content_manager.gd")
 var config_script = load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/mod_configs.gd")
-var sp_controller_script = load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/sp_controller.gd")
 
-func _init(modLoader = ModLoader):
+func _init():
 	ModLoaderLog.info("Init", MOD_LOG)
-	path = modLoader.UNPACKED_DIR + MOD_DIR
+	path = ModLoaderMod.get_unpacked_dir() + MOD_DIR
 	extension_path = path + extension_path
 	translation_path = path + translation_path
 	
 	# スクリプトのdir
 	var extensions = [
 		"singletons/player_run_data.gd",
-		#"singletons/run_data.gd",
-		#"weapons/weapon.gd",
 		"ui/hud/skill_point_ui.gd",
+		"entities/units/player/behavior/trailblazer_behavior.gd",
+		"singletons/sp_controller.gd",
 		"entities/units/player/player.gd",
 		"main.gd"
 	]
@@ -32,10 +31,10 @@ func _init(modLoader = ModLoader):
 	]
 	
 	for extension in extensions:
-		modLoader.install_script_extension(extension_path + extension)
+		ModLoaderMod.install_script_extension(extension_path + extension)
 	
 	for translation in translations:
-		modLoader.add_translation_from_resource(translation_path + translation)
+		ModLoaderMod.add_translation(translation_path + translation)
 
 func _ready():
 	_load_configs()
@@ -55,9 +54,4 @@ func _load_configs() -> void:
 	config.set_name("Config")
 	$"/root/ModLoader/makizakao-Expresstato".call("add_child", config)
 
-# SPを管理するノード
-func _load_sp_controller() -> void:
-	var sp_controller = sp_controller_script.new()
-	sp_controller.set_name("SPController")
-	$"/root/ModLoader/makizakao-Expresstato".call("add_child", sp_controller)
-	
+

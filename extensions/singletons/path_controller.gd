@@ -1,15 +1,14 @@
-class_name PathController
-extends Reference
+extends Node
 
 var _pathes: Dictionary = {
 	"path_enigmata": null,
 	"path_remembrance": null,
 	"path_trailblaze": null,
 	"path_propagation": null,
-	"path_preservation": null,
+	"path_preservation": load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/character_path/preservation_path.gd"),
 	"path_harmoney": null,
 	"path_hunt": null,
-	"path_destruction": DestructionPath.new(),
+	"path_destruction": load("res://mods-unpacked/makizakao-Expresstato/extensions/singletons/character_path/destruction_path.gd").new(),
 	"path_equilibrium": null,
 	"path_order": null,
 	"path_voracity": null,
@@ -19,11 +18,16 @@ var _pathes: Dictionary = {
 	"path_erudition": null
 }
 
-
-# main.gdの_process()で呼び出す(フレーム毎処理)
-func process(delta):
+func _process(delta):
 	# プレイヤーごとに運命の効果を適用
 	for player_idx in RunData.players_data.size():
 		# effectは二次配列として出てくるのでforで回す
 		for effect in RunData.get_player_effect("path_effect", player_idx):
 			_pathes[effect[0]].process(delta, player_idx, effect)
+
+func _ready():
+	# プレイヤーごとに運命の効果を適用
+	for player_idx in RunData.players_data.size():
+		# effectは二次配列として出てくるのでforで回す
+		for effect in RunData.get_player_effect("path_effect", player_idx):
+			_pathes[effect[0]].init(player_idx, effect)
